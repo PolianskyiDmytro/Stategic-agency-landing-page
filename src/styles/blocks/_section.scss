@@ -1,0 +1,17 @@
+.section {
+  &__title {
+    color: $section-title-color;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 19.5px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  &__heading {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 41.6px;
+  }
+}

@@ -1,0 +1,40 @@
+.who-we-are {
+  margin-block: 120px;
+
+  @include on-tablet {
+    margin-block: 148px;
+  }
+
+
+
+  &__content {
+    @include page-grid;
+  }
+
+  &__title {
+    grid-column: 1 / -1;
+
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+    text-align: center;
+  }
+
+  &__text {
+    font-family: "Open Sans", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 33px;
+    text-align: center;
+
+    grid-column: 1 / -1;
+
+    @include on-small-desktop {
+      grid-column: 2 / -2;
+    }
+
+    @include on-desktop {
+      grid-column: 3 / -3;
+    }
+  }
+}

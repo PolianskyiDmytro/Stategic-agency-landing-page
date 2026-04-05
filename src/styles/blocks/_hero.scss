@@ -1,0 +1,166 @@
+.hero {
+  position: relative;
+  background: $header-footer-hero-bg-color;
+  color: $header-footer-hero-color;
+  border-radius: 0 0 30px 30px;
+
+  &__content {
+    @include page-grid;
+  }
+
+  &__title {
+    grid-column: 1 / -1;
+    margin-block: 48px 298px;
+
+    @include page-grid;
+
+    @include on-small-desktop {
+      --columns: 6;
+
+      grid-column: span 6;
+      margin-block: 164px 205px;
+      column-gap: 20px;
+    }
+
+    @include on-desktop {
+      grid-column: span 5;
+
+      --columns: 5;
+    }
+  }
+
+  &__heading {
+    color: $header-footer-hero-color;
+    margin: 0;
+    grid-column: 1 / -1;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 68px;
+    letter-spacing: -2px;
+  }
+
+  &__moto {
+    color: $header-footer-hero-color;
+    grid-column: 1 / -1;
+    font-size: 18px;
+    line-height: 27px;
+    padding-block: 32px 72px;
+
+    @include on-tablet {
+      grid-column: span 4;
+      padding-block: 24px 56px;
+    }
+
+    @include on-small-desktop {
+      grid-column: span 5;
+      padding-block: 32px 83px;
+    }
+
+    @include on-desktop {
+      grid-column: span 4;
+    }
+  }
+
+  &__button {
+    grid-column: 1 / -1;
+    height: 50px;
+    border-radius: 8px;
+
+    @include hover (transform, scale(1.1));
+
+    @include on-tablet {
+      width: 264px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    height: 390px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 30px;
+
+    @include on-small-desktop {
+      height: 680px;
+      border-radius: 30px 0;
+    }
+
+    &-container {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+
+      @include on-small-desktop {
+        left: 50%;
+      }
+
+      @include on-desktop {
+        left: 55.97%;
+      }
+    }
+  }
+
+  &__carousel {
+    z-index: 1;
+    grid-column: 1 / -1;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include on-small-desktop {
+      grid-column: 8 / -1;
+      flex-direction: row;
+      gap: 24px;
+      align-items: center;
+      margin-block: 608px 48px;
+    }
+
+    @include on-desktop {
+      margin-left: 48px;
+    }
+  }
+
+  &__slider-button {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+
+    @include hover (background-color, #aaa);
+
+    &s {
+      display: flex;
+      gap: 16px;
+    }
+
+    &--left {
+      background-image: url(../images/slider/arrow-left.svg);
+    }
+
+    &--right {
+      background-image: url(../images/slider/arrow-right.svg);
+    }
+  }
+
+  &__slider-title {
+    color: $header-footer-hero-color;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 19.5px;
+    letter-spacing: 3px;
+  }
+
+  &__slider-text {
+    color: $header-footer-hero-color;
+    font-size: 14px;
+    line-height: 19.6px;
+  }
+}

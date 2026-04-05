@@ -1,0 +1,93 @@
+.our-expertise {
+  background-color: $header-footer-hero-color;
+  border-radius: 30px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    padding-block: 72px;
+
+    @include on-tablet {
+      padding-block: 128px;
+      gap: 64px;
+    }
+  }
+
+  &__title {
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 78px;
+    text-align: center;
+  }
+
+  &__blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    align-items: center;
+
+    @include on-small-desktop {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 137px;
+    }
+
+    @include on-desktop {
+      gap: 177px;
+    }
+  }
+
+  &__block {
+    --columns: 2;
+
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: repeat(var(--columns), 1fr);
+
+    @include on-tablet {
+      --columns: 6;
+
+      column-gap: 30px;
+    }
+
+    @include on-small-desktop {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__img {
+    width: 166px;
+    height: 166px;
+    margin: 0 auto;
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 3 / -3;
+    }
+
+
+  }
+
+  &__heading {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: center;
+    grid-column: 1 / -1;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    grid-column: 1 / -1 ;
+
+    @include on-tablet {
+      grid-column: 2 / -2;
+    }
+  }
+}
