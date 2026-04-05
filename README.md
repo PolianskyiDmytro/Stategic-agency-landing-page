@@ -31,7 +31,7 @@ This project was created to practice building modern agency landing pages, impro
 ---
 
 ## 🌐 #LiveDemo
-[View Project](https://PolianskyiDmytro.github.io/layout_dia/)
+[View Project](https://polianskyidmytro.github.io/Stategic-agency-landing-page/)
 
 ---
 
